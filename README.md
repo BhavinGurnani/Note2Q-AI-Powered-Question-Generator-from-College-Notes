@@ -4,31 +4,31 @@ The project is built using a Retrieval-Augmented Generation (RAG) architecture, 
 
 This system enhances personalized learning, exam preparation, and self-assessment by transforming static notes into interactive study material.
 
-🎯 Problem Statement
+# 🎯 Problem Statement
 
 Traditional Large Language Models (LLMs):
 
-Are general-purpose and not domain-specific
+Are general-purpose and not domain-specific.
 
-Can hallucinate content not present in source material
+Can hallucinate content not present in source material.
 
-Cannot dynamically process newly uploaded academic documents
+Cannot dynamically process newly uploaded academic documents.
 
 Note2Q solves these limitations by:
 
-Processing user-uploaded documents (PPT, PDF, DOCX)
+Processing user-uploaded documents. (PPT, PDF, DOCX)
 
-Performing semantic retrieval over document chunks
+Performing semantic retrieval over document chunks.
 
-Generating questions strictly grounded in retrieved content
+Generating questions strictly grounded in retrieved content.
 
-Reducing hallucination through retrieval conditioning
+Reducing hallucination through retrieval conditioning.
 
-🧠 System Architecture
+# 🧠 System Architecture
 
 The system follows a structured Retrieval-Augmented Generation pipeline:
 
-1️⃣ Resource Collection
+# 1️⃣ Resource Collection
 
 Supports multiple academic formats:
 
@@ -38,7 +38,7 @@ PDF (Notes)
 
 DOCX (Study Material)
 
-2️⃣ Text Extraction
+# 2️⃣ Text Extraction
 
 PPTX → python-pptx
 
@@ -48,7 +48,7 @@ DOCX → python-docx
 
 Extracted text is aggregated into a unified corpus.
 
-3️⃣ Text Preprocessing
+# 3️⃣ Text Preprocessing
 
 Lowercasing text
 
@@ -60,7 +60,7 @@ Whitespace normalization
 
 This ensures clean and consistent input for embedding generation.
 
-4️⃣ Chapter-wise Chunking
+# 4️⃣ Chapter-wise Chunking
 
 Documents are divided into logical chapter-based sections to:
 
@@ -70,7 +70,7 @@ Improve semantic retrieval accuracy
 
 Enable topic-focused question generation
 
-5️⃣ Embedding & Indexing
+# 5️⃣ Embedding & Indexing
 
 Embedding Model: all-MiniLM-L6-v2 (SentenceTransformers)
 
@@ -80,7 +80,7 @@ Converts document chunks into dense vector embeddings
 
 Enables semantic similarity search
 
-6️⃣ Retrieval Mechanism
+# 6️⃣ Retrieval Mechanism
 
 User query is embedded
 
@@ -90,7 +90,7 @@ Most relevant content is retrieved
 
 This ensures document-grounded generation.
 
-7️⃣ Question Generation
+# 7️⃣ Question Generation
 
 Generative Model: microsoft/DialoGPT-medium
 
@@ -100,21 +100,21 @@ Generates natural, human-like academic questions
 
 Conditioned on retrieved context
 
-🔥 Key Features
+# 🔥 Key Features
 
-Chapter-wise question generation
+Chapter-wise question generation.
 
-Context-aware semantic retrieval
+Context-aware semantic retrieval.
 
-Reduced hallucination via grounding
+Reduced hallucination via grounding.
 
-Flashcard generation for quick revision
+Flashcard generation for quick revision.
 
-Exam simulation & mock test support
+Exam simulation & mock test support.
 
-Personalized learning assistance
+Personalized learning assistance.
 
-🛠 Tech Stack
+# 🛠 Tech Stack
 
 Python
 
@@ -132,7 +132,7 @@ NumPy
 
 Scikit-learn
 
-📚 Use Cases
+# 📚 Use Cases
 
 Self-assessment & practice
 
@@ -144,28 +144,29 @@ Teacher assistance
 
 Academic revision
 
-🔮 Future Improvements
+# 🔮 Future Improvements
 
-Fine-tuning domain-specific transformer models
+Fine-tuning domain-specific transformer models.
 
-Integration with vector databases (FAISS / Pinecone)
+Integration with vector databases. (FAISS / Pinecone)
 
-Web deployment using Streamlit or Flask
+Web deployment using Streamlit or Flask.
 
-Difficulty-level adaptive question generation
+Difficulty-level adaptive question generation.
 
-Multi-language academic support
+Multi-language academic support.
 
-🏆 Project Significance
+# 🏆 Project Significance
 
 Note2Q demonstrates:
 
-Practical implementation of Retrieval-Augmented Generation
+Practical implementation of Retrieval-Augmented Generation.
 
-Real-world NLP pipeline design
+Real-world NLP pipeline design.
 
-Document-grounded LLM architecture
+Document-grounded LLM architecture.
 
-Application of semantic embeddings in educational technology
+Application of semantic embeddings in educational technology.
+
 
 This project bridges the gap between static academic notes and intelligent AI-driven learning systems.
